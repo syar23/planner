@@ -1,0 +1,164 @@
+:root {
+  --bg: #f6f7fb;
+  --bg-alt: #ffffff;
+  --text: #1a1d29;
+  --text-dim: #5b6072;
+  --border: #e2e4ec;
+  --accent: #4f5df6;
+  --accent-dim: #eef0ff;
+  --accent-text: #ffffff;
+  --success: #1fa971;
+  --success-dim: #e7f7f1;
+  --card-shadow: 0 1px 2px rgba(20, 22, 40, 0.04), 0 8px 24px rgba(20, 22, 40, 0.04);
+  --radius: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14161f;
+    --bg-alt: #1b1e2b;
+    --text: #eef0f7;
+    --text-dim: #9aa0b4;
+    --border: #2b2f42;
+    --accent: #7c86ff;
+    --accent-dim: #262a45;
+    --accent-text: #10111a;
+    --success: #35c98d;
+    --success-dim: #16332a;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.25);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14161f;
+  --bg-alt: #1b1e2b;
+  --text: #eef0f7;
+  --text-dim: #9aa0b4;
+  --border: #2b2f42;
+  --accent: #7c86ff;
+  --accent-dim: #262a45;
+  --accent-text: #10111a;
+  --success: #35c98d;
+  --success-dim: #16332a;
+  --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.25);
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+body { overflow-x: hidden; }
+
+a { color: var(--accent); }
+
+.hero {
+  background: linear-gradient(180deg, var(--accent-dim), var(--bg));
+  border-bottom: 1px solid var(--border);
+  padding: 56px 20px 40px;
+}
+.hero-inner { max-width: 780px; margin: 0 auto; text-align: center; }
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+.hero h1 { font-size: clamp(1.7rem, 4vw, 2.5rem); margin: 0 0 16px; line-height: 1.2; }
+.hero .sub { color: var(--text-dim); font-size: 1.05rem; max-width: 620px; margin: 0 auto 24px; }
+
+.hero-stats {
+  display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 24px;
+}
+.stat-pill {
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: 999px;
+  padding: 8px 16px; font-size: 0.88rem; color: var(--text-dim);
+}
+.stat-pill strong { color: var(--text); }
+
+.hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
+.btn {
+  border: 1px solid var(--border); border-radius: 10px; padding: 11px 20px;
+  font-size: 0.95rem; font-weight: 600; cursor: pointer; background: var(--bg-alt); color: var(--text);
+}
+.btn.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+.btn.ghost { background: transparent; }
+.btn:hover { opacity: 0.88; }
+
+.local-note { font-size: 0.8rem; color: var(--text-dim); max-width: 480px; margin: 0 auto; }
+
+main { max-width: 900px; margin: 0 auto; padding: 40px 20px 60px; }
+
+section h2 { font-size: 1.4rem; margin: 0 0 8px; }
+.tracks-sub { color: var(--text-dim); margin: 0 0 20px; font-size: 0.95rem; }
+
+.track-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 44px; }
+.track-card {
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px; box-shadow: var(--card-shadow);
+}
+.track-card h3 { margin: 0 0 8px; font-size: 1rem; }
+.track-card p { margin: 0; color: var(--text-dim); font-size: 0.88rem; }
+
+.overview { margin-bottom: 36px; }
+.progress-bar-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.progress-bar { flex: 1; height: 12px; border-radius: 999px; background: var(--accent-dim); overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: var(--accent); transition: width 0.3s ease; }
+#overall-pct { font-weight: 700; min-width: 44px; text-align: right; }
+
+.week-dots { display: flex; flex-wrap: wrap; gap: 8px; }
+.week-dot {
+  width: 34px; height: 34px; border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  background: var(--bg-alt); border: 1px solid var(--border); font-size: 0.8rem; font-weight: 700; color: var(--text-dim);
+  cursor: pointer;
+}
+.week-dot.done { background: var(--success-dim); border-color: var(--success); color: var(--success); }
+.week-dot.active { outline: 2px solid var(--accent); }
+
+.week-card {
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+  margin-bottom: 16px; box-shadow: var(--card-shadow); overflow: hidden; scroll-margin-top: 16px;
+}
+.week-header {
+  display: flex; align-items: center; gap: 14px; padding: 18px 20px; cursor: pointer;
+}
+.week-num {
+  flex-shrink: 0; width: 42px; height: 42px; border-radius: 10px; background: var(--accent-dim); color: var(--accent);
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem;
+}
+.week-header-text { flex: 1; min-width: 0; }
+.week-header-text h3 { margin: 0 0 2px; font-size: 1.05rem; }
+.week-meta { font-size: 0.8rem; color: var(--text-dim); }
+.week-progress-mini { font-size: 0.82rem; color: var(--text-dim); white-space: nowrap; }
+.chevron { transition: transform 0.2s ease; color: var(--text-dim); flex-shrink: 0; }
+.week-card.open .chevron { transform: rotate(90deg); }
+
+.week-body { display: none; padding: 0 20px 22px; }
+.week-card.open .week-body { display: block; }
+.week-why { color: var(--text-dim); font-size: 0.9rem; margin: 0 0 18px; padding-top: 4px; border-top: 1px solid var(--border); padding-top: 14px; }
+
+.day-block { margin-bottom: 14px; }
+.day-label { font-size: 0.82rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.03em; margin: 0 0 6px; }
+.task {
+  display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; font-size: 0.94rem;
+}
+.task input[type="checkbox"] { margin-top: 3px; width: 17px; height: 17px; accent-color: var(--success); flex-shrink: 0; cursor: pointer; }
+.task label { cursor: pointer; }
+.task.checked label { color: var(--text-dim); text-decoration: line-through; }
+
+.notes { margin-top: 20px; }
+#notes-area {
+  width: 100%; border-radius: var(--radius); border: 1px solid var(--border); background: var(--bg-alt);
+  color: var(--text); padding: 14px; font-family: inherit; font-size: 0.92rem; resize: vertical;
+}
+
+footer { text-align: center; padding: 30px 20px 50px; color: var(--text-dim); font-size: 0.85rem; }
+
+@media (max-width: 520px) {
+  .week-header { padding: 14px; }
+  .week-progress-mini { display: none; }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12-Week Career Rebuild Plan</title>
+<meta name="description" content="A 12-week interactive plan: IAM/Auth + AI Security career rebuild.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Career Rebuild — 12 Week Plan</p>
+    <h1>From Information Security Engineer<br>to Identity &amp; AI Security</h1>
+    <p class="sub">A 4-year break isn't a gap to hide — it's context. This is a 12-week, day-by-day plan to rebuild real skills in Identity &amp; Access Management and AI Security, build a portfolio that proves it, and land interviews before the clock runs out.</p>
+    <div class="hero-stats" id="hero-stats"></div>
+    <div class="hero-actions">
+      <button id="start-btn" class="btn primary">Start / Restart Plan</button>
+      <button id="reset-btn" class="btn ghost">Reset Progress</button>
+    </div>
+    <p class="local-note">Progress is saved locally in your browser only — nothing is uploaded. If you're viewing a link a friend shared, checking boxes here won't affect their copy.</p>
+  </div>
+</header>
+
+<main>
+  <section class="tracks">
+    <h2>Four directions, one foundation</h2>
+    <p class="tracks-sub">Weeks 1–2 scout all four. Week 7 is a hard checkpoint to commit to one. The IAM/Auth + AI Security core (weeks 3–6) is useful for every direction below.</p>
+    <div class="track-grid">
+      <div class="track-card"><h3>IAM / Auth Architect</h3><p>Deep identity &amp; access work — FIDO2, WebAuthn, PAM. More architecture, less on-call.</p></div>
+      <div class="track-card"><h3>AI Security &amp; Governance</h3><p>Securing AI systems and shaping risk policy. Strategic, fast-growing, less hands-on-keyboard.</p></div>
+      <div class="track-card"><h3>Security Product Manager</h3><p>Fully non-technical pivot — drive product using your engineering credibility.</p></div>
+      <div class="track-card"><h3>Hybrid: IAM + AI Security</h3><p>The intersection — AI-driven fraud detection, adaptive auth, biometric liveness.</p></div>
+    </div>
+  </section>
+
+  <section class="overview">
+    <h2>Overall Progress</h2>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="overall-fill"></div></div>
+      <span id="overall-pct">0%</span>
+    </div>
+    <div class="week-dots" id="week-dots"></div>
+  </section>
+
+  <section id="weeks-container" class="weeks"></section>
+
+  <section class="notes">
+    <h2>Notes &amp; Applications Tracker</h2>
+    <p class="tracks-sub">Free-text scratchpad — jot down contacts, application status, interview notes. Saved locally in this browser.</p>
+    <textarea id="notes-area" rows="8" placeholder="e.g. Applied to Company X — IAM Engineer role, 2026-08-15, referred by..."></textarea>
+  </section>
+</main>
+
+<footer>
+  <p>Built as a personal 12-week career rebuild plan. Fork it, adapt it, make it yours.</p>
+</footer>
+
+<script src="plan.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
