@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Engineer Interview Prep</title>
+<meta name="description" content="Company-agnostic interview prep for ML Engineer / MLOps roles, organized by round type.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow"><a href="index.html" style="color:inherit;">&larr; Career Rebuild Plan</a></p>
+    <h1>ML Engineer / MLOps<br>Interview Prep</h1>
+    <p class="sub">Company-agnostic prep organized by round type — coding, ML system design (serving, drift, training infra, experiment tracking), tech stack/architecture, and behavioral. Built from the common shape of ML/MLOps interview loops industry-wide, not any one company's specific questions.</p>
+    <div class="hero-stats" id="hero-stats"></div>
+    <div class="hero-actions">
+      <button id="reset-btn" class="btn ghost">Reset Progress</button>
+    </div>
+    <p class="local-note">Progress is saved locally in your browser only. This page is meant to grow — more round types/topics can be added as you gather more context on the kinds of roles you're targeting.</p>
+  </div>
+</header>
+
+<main>
+  <section class="overview">
+    <h2>Overall Progress</h2>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="overall-fill"></div></div>
+      <span id="overall-pct">0%</span>
+    </div>
+  </section>
+
+  <section id="sections-container" class="weeks"></section>
+</main>
+
+<footer>
+  <p>Interview prep companion to the 12-week career rebuild plan. Fork it, adapt it, make it yours.</p>
+</footer>
+
+<script src="interview-prep.js"></script>
+<script src="interview-prep-app.js"></script>
+</body>
+</html>

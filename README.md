@@ -1,18 +1,21 @@
 # 12-Week Career Rebuild Plan
 
 An interactive, day-by-day task list: rebuilding from Information Security Engineer
-toward Identity & Access Management / AI Security — built after a 4-year career break.
+toward building AI/software for climate & energy problems — built after a 4-year
+career break.
 
 Live site: https://syar23.github.io/planner/
 
 ## What it is
 
 - 12 weeks × 7 days of concrete tasks (not generic advice) covering IAM/Auth
-  fundamentals (WebAuthn, YubiKeys, OAuth2/OIDC, biometrics), AI security &
-  governance, a portfolio-building bridge project, and a job-search sprint.
+  fundamentals (WebAuthn, YubiKeys, OAuth2/OIDC, biometrics), AI security,
+  core software engineering (Python, SQL, ML basics, testing), a security+AI
+  bridge project, a flagship climate/energy AI-software project, and a
+  job-search sprint targeted at climate tech and clean energy companies.
 - Two decision checkpoints (Week 1 and Week 7) to converge on one of four
-  target directions: IAM Architect, AI Security/Governance, Security Product
-  Manager, or the Hybrid IAM+AI specialist.
+  sub-tracks: ML/AI Engineer, Software Engineer, Data Engineer (Sustainability/ESG),
+  or Security Engineer for energy/climate infrastructure.
 - Progress (checkboxes + notes) is saved in your browser via `localStorage` —
   nothing is uploaded anywhere. Sharing the link lets others view the plan;
   it does not sync your progress to them.
